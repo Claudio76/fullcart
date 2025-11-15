@@ -1,0 +1,20 @@
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <h1>🛒 FullCart</h1>
+      </div>
+      <nav class="nav">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          Catálogo
+        </a>
+        <a routerLink="/cart" routerLinkActive="active" class="cart-link">
+          Carrito
+          @if (cartService.totalItems() > 0) {
+            <span class="cart-badge">{{ cartService.totalItems() }}</span>
+          }
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,68 @@
+<div class="catalog-container">
+  <div class="catalog-header">
+    <h2>Catálogo de Productos</h2>
+    <p class="subtitle">Encuentra los mejores productos al mejor precio</p>
+  </div>
+
+  <!-- Filtro de categorías -->
+  <div class="category-filters">
+    <button
+      class="category-btn"
+      [class.active]="selectedCategory() === 'Todos'"
+      (click)="selectCategory('Todos')">
+      Todos
+    </button>
+    @for (category of categories; track category) {
+      <button
+        class="category-btn"
+        [class.active]="selectedCategory() === category"
+        (click)="selectCategory(category)">
+        {{ category }}
+      </button>
+    }
+  </div>
+
+  <!-- Grid de productos -->
+  <div class="products-grid">
+    @for (product of filteredProducts; track product.id) {
+      <div class="product-card">
+        <div class="product-image">
+          <img [src]="product.image" [alt]="product.name">
+          @if (product.stock < 5) {
+            <span class="low-stock-badge">¡Pocas unidades!</span>
+          }
+        </div>
+        <div class="product-info">
+          <span class="product-category">{{ product.category }}</span>
+          <h3 class="product-name">{{ product.name }}</h3>
+          <p class="product-description">{{ product.description }}</p>
+          <div class="product-footer">
+            <span class="product-price">${{ product.price | number:'1.2-2' }}</span>
+            <button
+              class="add-to-cart-btn"
+              [class.in-cart]="isInCart(product.id)"
+              (click)="addToCart(product)"
+              [disabled]="product.stock === 0">
+              @if (product.stock === 0) {
+                Sin stock
+              } @else if (isInCart(product.id)) {
+                ✓ En carrito
+              } @else {
+                Agregar
+              }
+            </button>
+          </div>
+          <div class="stock-info">
+            Stock disponible: {{ product.stock }}
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+
+  @if (filteredProducts.length === 0) {
+    <div class="no-products">
+      <p>No hay productos disponibles en esta categoría</p>
+    </div>
+  }
+</div>
