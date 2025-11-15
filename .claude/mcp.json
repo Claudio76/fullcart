@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "mercadopago": {
+      "transport": "http",
+      "url": "https://mcp.mercadopago.com/mcp",
+      "headers": {
+        "Authorization": "Bearer TEST-3190393797380493-111423-572cfd8063a0bdd9b72089f5e0c67257-144978606"
+      }
+    }
+  }
+}
