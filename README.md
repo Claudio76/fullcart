@@ -242,3 +242,7 @@ Desarrollado con ❤️ usando Angular
 ---
 
 **⭐ Si te gusta este proyecto, dale una estrella en GitHub!**
+
+## 🌍 Otros Idiomas
+
+- [English](README_EN.md)
