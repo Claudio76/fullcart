@@ -1,142 +1,144 @@
-# 🛒 FullCart - Aplicación de Compras SPA
+# 🛒 FullCart - Shopping SPA Application
 
-Aplicación web moderna de comercio electrónico tipo SPA (Single Page Application) construida con Angular. Permite a los usuarios navegar por un catálogo de productos, filtrar por categorías y gestionar un carrito de compras con persistencia en la sesión del navegador.
+> 📖 **[Leer en Español](README_ES.md)**
+
+Modern e-commerce web application built as a Single Page Application (SPA) using Angular. Allows users to browse a product catalog, filter by categories, and manage a shopping cart with browser session persistence.
 
 ![Angular](https://img.shields.io/badge/Angular-20.3-DD0031?style=for-the-badge&logo=angular)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-## ✨ Características Principales
+## ✨ Key Features
 
-### 🏪 Catálogo de Productos
-- **Grid responsive** de productos con diseño adaptable a móvil, tablet y desktop
-- **Filtros por categoría** personalizables (Electrónica, Deportes, Hogar)
-- **12 productos de ejemplo** con información detallada
-- Indicadores visuales de stock bajo
-- Imágenes de productos de alta calidad
-- Estados visuales de productos en el carrito
+### 🏪 Product Catalog
+- **Responsive grid** layout adaptable to mobile, tablet, and desktop
+- **Customizable category filters** (Electronics, Sports, Home)
+- **12 sample products** with detailed information
+- Visual low-stock indicators
+- High-quality product images
+- Visual states for products in cart
 
-### 🛒 Carrito de Compras
-- **Gestión completa**: agregar, modificar cantidad, eliminar productos
-- **Persistencia en sessionStorage** - los productos se mantienen durante la sesión
-- Cálculo automático de subtotales y total de la compra
-- Contador de items en tiempo real en el header
-- Vista especial para carrito vacío
-- Función de checkout y limpieza del carrito
-- Validación de stock al agregar productos
+### 🛒 Shopping Cart
+- **Complete management**: add, modify quantity, remove products
+- **SessionStorage persistence** - products remain during the session
+- Automatic calculation of subtotals and total purchase
+- Real-time item counter in header
+- Special view for empty cart
+- Checkout and cart clearing functionality
+- Stock validation when adding products
 
-### 🎨 Diseño Moderno
-- Interfaz moderna con gradientes violeta/púrpura
-- Diseño completamente responsive
-- Animaciones y transiciones suaves
-- Header sticky con navegación intuitiva
-- Badges dinámicos para el contador del carrito
+### 🎨 Modern Design
+- Modern interface with violet/purple gradients
+- Fully responsive design
+- Smooth animations and transitions
+- Sticky header with intuitive navigation
+- Dynamic badges for cart counter
 
-### ⚡ Arquitectura Técnica
-- **SPA** con navegación sin recarga de página
-- **Angular Signals** para reactividad óptima
-- **Standalone Components** (arquitectura moderna de Angular)
-- **TypeScript** con tipado estricto
-- Servicios con inyección de dependencias
-- Separación clara de responsabilidades (modelos, servicios, componentes)
+### ⚡ Technical Architecture
+- **SPA** with navigation without page reloads
+- **Angular Signals** for optimal reactivity
+- **Standalone Components** (modern Angular architecture)
+- **TypeScript** with strict typing
+- Services with dependency injection
+- Clear separation of concerns (models, services, components)
 
-## 🚀 Tecnologías Utilizadas
+## 🚀 Technologies Used
 
-- **Angular 20.3** - Framework principal
-- **TypeScript 5.x** - Lenguaje de programación
-- **RxJS** - Programación reactiva
-- **Angular Router** - Navegación entre vistas
-- **CSS3** - Estilos y animaciones
-- **SessionStorage API** - Persistencia de datos
+- **Angular 20.3** - Main framework
+- **TypeScript 5.x** - Programming language
+- **RxJS** - Reactive programming
+- **Angular Router** - Navigation between views
+- **CSS3** - Styles and animations
+- **SessionStorage API** - Data persistence
 
-## 📁 Estructura del Proyecto
+## 📁 Project Structure
 
 ```
 src/app/
-├── components/           # Componentes de la aplicación
-│   ├── header/          # Navegación principal
-│   ├── product-catalog/ # Catálogo de productos
-│   └── shopping-cart/   # Carrito de compras
-├── models/              # Modelos de datos
+├── components/           # Application components
+│   ├── header/          # Main navigation
+│   ├── product-catalog/ # Product catalog
+│   └── shopping-cart/   # Shopping cart
+├── models/              # Data models
 │   ├── product.model.ts
 │   └── cart-item.model.ts
-├── services/            # Servicios de la aplicación
-│   ├── cart.service.ts     # Gestión del carrito
-│   └── product.service.ts  # Gestión de productos
-├── app.ts               # Componente raíz
-├── app.routes.ts        # Configuración de rutas
-└── app.config.ts        # Configuración de la app
+├── services/            # Application services
+│   ├── cart.service.ts     # Cart management
+│   └── product.service.ts  # Product management
+├── app.ts               # Root component
+├── app.routes.ts        # Route configuration
+└── app.config.ts        # App configuration
 ```
 
-## 🛠️ Instalación y Configuración
+## 🛠️ Installation and Setup
 
-### Prerequisitos
-- Node.js 18.x o superior
-- npm 10.x o superior
+### Prerequisites
+- Node.js 18.x or higher
+- npm 10.x or higher
 
-### Pasos de Instalación
+### Installation Steps
 
-1. **Clonar el repositorio**
+1. **Clone the repository**
 ```bash
 git clone https://github.com/Claudio76/fullcart.git
 cd fullcart
 ```
 
-2. **Instalar dependencias**
+2. **Install dependencies**
 ```bash
 npm install
 ```
 
-3. **Iniciar el servidor de desarrollo**
+3. **Start development server**
 ```bash
 npm start
 ```
 
-4. **Abrir en el navegador**
+4. **Open in browser**
 ```
 http://localhost:4200
 ```
 
-## 📝 Comandos Disponibles
+## 📝 Available Commands
 
 ```bash
-# Iniciar servidor de desarrollo
+# Start development server
 npm start
 
-# Compilar para producción
+# Build for production
 npm run build
 
-# Ejecutar tests
+# Run tests
 npm test
 
-# Ejecutar linter
+# Run linter
 npm run lint
 ```
 
-## 🎯 Uso de la Aplicación
+## 🎯 Application Usage
 
-### Navegación por el Catálogo
-1. Al ingresar, verás el catálogo completo de productos
-2. Usa los botones de categoría para filtrar productos
-3. Haz clic en "Agregar" para añadir productos al carrito
-4. Los productos añadidos mostrarán "✓ En carrito"
+### Browsing the Catalog
+1. Upon entering, you'll see the complete product catalog
+2. Use category buttons to filter products
+3. Click "Add" to add products to cart
+4. Added products will show "✓ In cart"
 
-### Gestión del Carrito
-1. Haz clic en "Carrito" en el header para ver tus productos
-2. El badge muestra el número total de items
-3. Usa los botones +/- para modificar cantidades
-4. Haz clic en 🗑️ para eliminar productos individuales
-5. Usa "Vaciar Carrito" para eliminar todos los productos
-6. Haz clic en "Finalizar Compra" para completar la compra
+### Cart Management
+1. Click "Cart" in the header to view your products
+2. The badge shows the total number of items
+3. Use +/- buttons to modify quantities
+4. Click 🗑️ to remove individual products
+5. Use "Clear Cart" to remove all products
+6. Click "Checkout" to complete the purchase
 
-### Persistencia de Datos
-- Los productos en el carrito se guardan automáticamente en sessionStorage
-- Los datos persisten al recargar la página
-- Se borran al cerrar la pestaña o ventana del navegador
+### Data Persistence
+- Cart products are automatically saved in sessionStorage
+- Data persists when reloading the page
+- Deleted when closing the browser tab or window
 
-## 🏗️ Arquitectura y Patrones
+## 🏗️ Architecture and Patterns
 
-### Modelos de Datos
+### Data Models
 
 **Product**
 ```typescript
@@ -159,90 +161,90 @@ npm run lint
 }
 ```
 
-### Servicios
+### Services
 
 **CartService**
-- Gestión completa del estado del carrito
-- Uso de Angular Signals para reactividad
-- Métodos: `addToCart`, `updateQuantity`, `removeFromCart`, `clearCart`
+- Complete cart state management
+- Use of Angular Signals for reactivity
+- Methods: `addToCart`, `updateQuantity`, `removeFromCart`, `clearCart`
 - Computed signals: `totalItems`, `totalPrice`
-- Persistencia automática en sessionStorage
+- Automatic persistence in sessionStorage
 
 **ProductService**
-- Catálogo de productos
-- Filtrado por categoría
-- Obtención de productos por ID
+- Product catalog
+- Category filtering
+- Get products by ID
 
-## 🎨 Características de Diseño
+## 🎨 Design Features
 
-### Paleta de Colores
-- **Principal**: Gradiente violeta/púrpura (#667eea → #764ba2)
-- **Acento**: Verde éxito (#00b894)
-- **Alerta**: Rojo (#ff4757)
-- **Fondo**: Gris claro (#f5f6fa)
+### Color Palette
+- **Primary**: Violet/purple gradient (#667eea → #764ba2)
+- **Accent**: Success green (#00b894)
+- **Alert**: Red (#ff4757)
+- **Background**: Light gray (#f5f6fa)
 
-### Breakpoints Responsive
-- **Móvil**: < 640px
+### Responsive Breakpoints
+- **Mobile**: < 640px
 - **Tablet**: 640px - 1024px
 - **Desktop**: > 1024px
 
-## 📦 Build y Producción
+## 📦 Build and Production
 
-### Tamaños del Bundle
-- **main.js**: ~246 kB (66.98 kB comprimido)
-- **polyfills.js**: ~34 kB (11.33 kB comprimido)
+### Bundle Sizes
+- **main.js**: ~246 kB (66.98 kB compressed)
+- **polyfills.js**: ~34 kB (11.33 kB compressed)
 - **styles.css**: ~311 bytes
-- **Total estimado**: ~78.62 kB transferido
+- **Total estimated**: ~78.62 kB transferred
 
-### Optimizaciones
-- Tree shaking automático
-- Minificación de código
-- Optimización de imágenes
-- Lazy loading preparado para escalabilidad
+### Optimizations
+- Automatic tree shaking
+- Code minification
+- Image optimization
+- Lazy loading ready for scalability
 
-## 🔮 Roadmap y Mejoras Futuras
+## 🔮 Roadmap and Future Improvements
 
-- [ ] Integración con API backend real
-- [ ] Autenticación de usuarios
-- [ ] Historial de compras
-- [ ] Búsqueda de productos
-- [ ] Comparación de productos
-- [ ] Lista de deseos
-- [ ] Reseñas y calificaciones
-- [ ] Checkout con pasarela de pago
-- [ ] Múltiples idiomas (i18n)
-- [ ] Tema oscuro/claro
+- [ ] Integration with real backend API
+- [ ] User authentication
+- [ ] Purchase history
+- [ ] Product search
+- [ ] Product comparison
+- [ ] Wishlist
+- [ ] Reviews and ratings
+- [ ] Checkout with payment gateway
+- [ ] Multiple languages (i18n)
+- [ ] Dark/light theme
 - [ ] PWA (Progressive Web App)
-- [ ] Tests unitarios y E2E
+- [ ] Unit and E2E tests
 
-## 🤝 Contribución
+## 🤝 Contributing
 
-Las contribuciones son bienvenidas. Por favor:
+Contributions are welcome. Please:
 
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+1. Fork the project
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📄 Licencia
+## 📄 License
 
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
-## 👨‍💻 Autor
+## 👨‍💻 Author
 
-Desarrollado con ❤️ usando Angular
+Developed with ❤️ using Angular
 
-## 🙏 Agradecimientos
+## 🙏 Acknowledgments
 
-- Imágenes de productos cortesía de [Unsplash](https://unsplash.com)
-- Iconos y emojis de Unicode
-- Framework Angular y su increíble comunidad
+- Product images courtesy of [Unsplash](https://unsplash.com)
+- Unicode icons and emojis
+- Angular framework and its amazing community
 
 ---
 
-**⭐ Si te gusta este proyecto, dale una estrella en GitHub!**
+**⭐ If you like this project, give it a star on GitHub!**
 
-## 🌍 Otros Idiomas
+## 🌍 Other Languages
 
-- [English](README_EN.md)
+- [Español (Spanish)](README_ES.md)
